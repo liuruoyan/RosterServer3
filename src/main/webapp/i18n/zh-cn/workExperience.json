@@ -1,0 +1,44 @@
+{
+  "rosterServer3App": {
+    "workExperience": {
+      "home": {
+        "title": "Work Experiences",
+        "createLabel": "创建新 Work Experience",
+        "createOrEditLabel": "创建或编辑 Work Experience",
+        "notFound": "No Work Experience found"
+      },
+      "created": "Work Experience {{ param }} 创建成功",
+      "updated": "Work Experience {{ param }} 更新成功",
+      "deleted": "Work Experience {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Work Experience {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Work Experience"
+      },
+      "code": "Code",
+      "eName": "E Name",
+      "phoneNum": "Phone Num",
+      "company": "Company",
+      "job": "Job",
+      "jobDesc": "Job Desc",
+      "hireDate": "Hire Date",
+      "leaveDate": "Leave Date",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "eName": "员工姓名",
+        "phoneNum": "手机号码",
+        "company": "公司名称",
+        "job": "担任职位",
+        "jobDesc": "职位描述",
+        "hireDate": "入职日期",
+        "leaveDate": "离职日期",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

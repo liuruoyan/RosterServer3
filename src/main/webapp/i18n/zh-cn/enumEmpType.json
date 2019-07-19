@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumEmpType": {
+      "home": {
+        "title": "Enum Emp Types",
+        "createLabel": "创建新 Enum Emp Type",
+        "createOrEditLabel": "创建或编辑 Enum Emp Type",
+        "notFound": "No Enum Emp Type found"
+      },
+      "created": "Enum Emp Type {{ param }} 创建成功",
+      "updated": "Enum Emp Type {{ param }} 更新成功",
+      "deleted": "Enum Emp Type {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Emp Type {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Emp Type"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumIdType": {
+      "home": {
+        "title": "Enum Id Types",
+        "createLabel": "创建新 Enum Id Type",
+        "createOrEditLabel": "创建或编辑 Enum Id Type",
+        "notFound": "No Enum Id Type found"
+      },
+      "created": "Enum Id Type {{ param }} 创建成功",
+      "updated": "Enum Id Type {{ param }} 更新成功",
+      "deleted": "Enum Id Type {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Id Type {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Id Type"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

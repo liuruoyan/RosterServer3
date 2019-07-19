@@ -1,0 +1,82 @@
+{
+    "name": "Contract",
+    "fields": [
+        {
+            "fieldName": "code",
+            "javadoc": "编码",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "javadoc": "当前合同起始日",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "javadoc": "当前合同终止日",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "email",
+            "javadoc": "工作邮箱",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "workTel",
+            "javadoc": "工作电话",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "probationEndDay",
+            "javadoc": "试用期到期日",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "probationLength",
+            "javadoc": "试用期长度",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "other",
+            "javadoc": "添加字段",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isSelfVerify",
+            "javadoc": "员工是否验证",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isHrVerify",
+            "javadoc": "管理（hr）是否验证",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "enumContractType",
+            "otherEntityRelationshipName": "contract",
+            "javadoc": "合同类型",
+            "relationshipName": "contractType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "employee",
+            "otherEntityRelationshipName": "contracts",
+            "relationshipName": "emp",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190718052155",
+    "javadoc": "合同（ 多对一 员工 ）",
+    "entityTableName": "contract",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

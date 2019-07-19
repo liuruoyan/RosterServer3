@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumPoliticsStatus": {
+      "home": {
+        "title": "Enum Politics Statuses",
+        "createLabel": "创建新 Enum Politics Status",
+        "createOrEditLabel": "创建或编辑 Enum Politics Status",
+        "notFound": "No Enum Politics Status found"
+      },
+      "created": "Enum Politics Status {{ param }} 创建成功",
+      "updated": "Enum Politics Status {{ param }} 更新成功",
+      "deleted": "Enum Politics Status {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Politics Status {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Politics Status"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

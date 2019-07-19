@@ -1,0 +1,66 @@
+{
+  "rosterServer3App": {
+    "personal": {
+      "home": {
+        "title": "Personals",
+        "createLabel": "创建新 Personal",
+        "createOrEditLabel": "创建或编辑 Personal",
+        "notFound": "No Personal found"
+      },
+      "created": "Personal {{ param }} 创建成功",
+      "updated": "Personal {{ param }} 更新成功",
+      "deleted": "Personal {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Personal {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Personal"
+      },
+      "code": "Code",
+      "stageName": "Stage Name",
+      "idName": "Id Name",
+      "nation": "Nation",
+      "accountLoc": "Account Loc",
+      "nativePlace": "Native Place",
+      "currentAddr": "Current Addr",
+      "spouseName": "Spouse Name",
+      "childName": "Child Name",
+      "bloodType": "Blood Type",
+      "emergencyContactName": "Emergency Contact Name",
+      "emergencyContactPhone": "Emergency Contact Phone",
+      "qq": "Qq",
+      "wechat": "Wechat",
+      "personalEmail": "Personal Email",
+      "remark": "Remark",
+      "others": "Others",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "accountType": "Account Type",
+      "highestEducation": "Highest Education",
+      "politicsStatus": "Politics Status",
+      "maritalStatus": "Marital Status",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "stageName": "花名",
+        "idName": "证件姓名",
+        "nation": "民族",
+        "accountLoc": "户口所在地",
+        "nativePlace": "籍贯",
+        "currentAddr": "居住地址",
+        "spouseName": "配偶姓名",
+        "childName": "孩子姓名",
+        "bloodType": "血型",
+        "emergencyContactName": "紧急联系人姓名",
+        "emergencyContactPhone": "紧急联系人电话",
+        "qq": "QQ",
+        "wechat": "微信",
+        "personalEmail": "个人邮箱",
+        "remark": "备注信息",
+        "others": "添加字段",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

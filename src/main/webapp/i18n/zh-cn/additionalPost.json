@@ -1,0 +1,44 @@
+{
+  "rosterServer3App": {
+    "additionalPost": {
+      "home": {
+        "title": "Additional Posts",
+        "createLabel": "创建新 Additional Post",
+        "createOrEditLabel": "创建或编辑 Additional Post",
+        "notFound": "No Additional Post found"
+      },
+      "created": "Additional Post {{ param }} 创建成功",
+      "updated": "Additional Post {{ param }} 更新成功",
+      "deleted": "Additional Post {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Additional Post {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Additional Post"
+      },
+      "code": "Code",
+      "name": "Name",
+      "phone": "Phone",
+      "dept": "Dept",
+      "job": "Job",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "remark": "Remark",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "name": "员工姓名",
+        "phone": "员工手机号",
+        "dept": "兼任部门",
+        "job": "兼任职位",
+        "startDate": "开始日期",
+        "endDate": "结束日期",
+        "remark": "备注",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

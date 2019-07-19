@@ -1,0 +1,46 @@
+{
+  "rosterServer3App": {
+    "directSupervisor": {
+      "home": {
+        "title": "Direct Supervisors",
+        "createLabel": "创建新 Direct Supervisor",
+        "createOrEditLabel": "创建或编辑 Direct Supervisor",
+        "notFound": "No Direct Supervisor found"
+      },
+      "created": "Direct Supervisor {{ param }} 创建成功",
+      "updated": "Direct Supervisor {{ param }} 更新成功",
+      "deleted": "Direct Supervisor {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Direct Supervisor {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Direct Supervisor"
+      },
+      "code": "Code",
+      "name": "Name",
+      "phone": "Phone",
+      "aSupName": "A Sup Name",
+      "aSupPhone": "A Sup Phone",
+      "bSupName": "B Sup Name",
+      "bSupPhone": "B Sup Phone",
+      "fSubName": "F Sub Name",
+      "fSubPhone": "F Sub Phone",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "name": "员工姓名",
+        "phone": "员工手机号",
+        "aSupName": "行政领导姓名",
+        "aSupPhone": "行政领导手机",
+        "bSupName": "业务领导姓名",
+        "bSupPhone": "业务领导手机",
+        "fSubName": "财务领导姓名",
+        "fSubPhone": "财务领导手机",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

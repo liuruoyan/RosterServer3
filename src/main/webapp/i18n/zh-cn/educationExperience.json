@@ -1,0 +1,45 @@
+{
+  "rosterServer3App": {
+    "educationExperience": {
+      "home": {
+        "title": "Education Experiences",
+        "createLabel": "创建新 Education Experience",
+        "createOrEditLabel": "创建或编辑 Education Experience",
+        "notFound": "No Education Experience found"
+      },
+      "created": "Education Experience {{ param }} 创建成功",
+      "updated": "Education Experience {{ param }} 更新成功",
+      "deleted": "Education Experience {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Education Experience {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Education Experience"
+      },
+      "code": "Code",
+      "name": "Name",
+      "phone": "Phone",
+      "school": "School",
+      "major": "Major",
+      "inDate": "In Date",
+      "graduationDate": "Graduation Date",
+      "inception": "Inception",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "education": "Education",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "name": "姓名",
+        "phone": "手机号码",
+        "school": "学校",
+        "major": "专业",
+        "inDate": "入校时间",
+        "graduationDate": "结业时间",
+        "inception": "是否取得学位",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

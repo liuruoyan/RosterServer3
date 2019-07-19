@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity SocialSecurityBenefits.
+    -->
+    <changeSet id="20190718052201-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="pf_type_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_pf_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_pf_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="pf_status_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_pf_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_pf_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="provident_pay_scheme_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_provident_pay_scheme_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_pf_pay_scheme"/>
+
+        <addForeignKeyConstraint baseColumnNames="social_security_pay_scheme_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_social_security_pay_scheme_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_ss_pay_scheme"/>
+
+        <addForeignKeyConstraint baseColumnNames="ss_status_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_ss_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_ss_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="labor_type_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_labor_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_emp_labor_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="taxer_type_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_taxer_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_emp_taxer_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="tax_area_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_tax_area_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="enum_emp_tax_area"/>
+
+        <addForeignKeyConstraint baseColumnNames="emp_id"
+                                 baseTableName="social_security_benefits"
+                                 constraintName="fk_social_security_benefits_emp_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+    </changeSet>
+</databaseChangeLog>

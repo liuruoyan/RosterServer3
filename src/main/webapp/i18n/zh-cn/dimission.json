@@ -1,0 +1,35 @@
+{
+  "rosterServer3App": {
+    "dimission": {
+      "home": {
+        "title": "Dimissions",
+        "createLabel": "创建新 Dimission",
+        "createOrEditLabel": "创建或编辑 Dimission",
+        "notFound": "No Dimission found"
+      },
+      "created": "Dimission {{ param }} 创建成功",
+      "updated": "Dimission {{ param }} 更新成功",
+      "deleted": "Dimission {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Dimission {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Dimission"
+      },
+      "code": "Code",
+      "lastDate": "Last Date",
+      "reason": "Reason",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "dimissionType": "Dimission Type",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "lastDate": "最后工作日",
+        "reason": "离职原因",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

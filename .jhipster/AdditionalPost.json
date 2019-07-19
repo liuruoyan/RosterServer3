@@ -1,0 +1,74 @@
+{
+    "name": "AdditionalPost",
+    "fields": [
+        {
+            "fieldName": "code",
+            "javadoc": "编码",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "javadoc": "员工姓名",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "javadoc": "员工手机号",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dept",
+            "javadoc": "兼任部门",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "job",
+            "javadoc": "兼任职位",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "javadoc": "开始日期",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "javadoc": "结束日期",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "remark",
+            "javadoc": "备注",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isSelfVerify",
+            "javadoc": "员工是否验证",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isHrVerify",
+            "javadoc": "管理（hr）是否验证",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "employee",
+            "otherEntityRelationshipName": "additionalPosts",
+            "relationshipName": "emp",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190718052218",
+    "javadoc": "公司内兼任信息  (多对一 员工)",
+    "entityTableName": "additional_post",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

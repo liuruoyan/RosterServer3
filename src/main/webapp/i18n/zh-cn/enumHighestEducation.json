@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumHighestEducation": {
+      "home": {
+        "title": "Enum Highest Educations",
+        "createLabel": "创建新 Enum Highest Education",
+        "createOrEditLabel": "创建或编辑 Enum Highest Education",
+        "notFound": "No Enum Highest Education found"
+      },
+      "created": "Enum Highest Education {{ param }} 创建成功",
+      "updated": "Enum Highest Education {{ param }} 更新成功",
+      "deleted": "Enum Highest Education {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Highest Education {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Highest Education"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

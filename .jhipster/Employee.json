@@ -1,0 +1,234 @@
+{
+    "name": "Employee",
+    "fields": [
+        {
+            "fieldName": "code",
+            "javadoc": "编码",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "javadoc": "员工姓名",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "idNumber",
+            "javadoc": "证件号",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "phone",
+            "javadoc": "手机号",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "hireDate",
+            "javadoc": "入职日期",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "jobGrade",
+            "javadoc": "职级",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "position",
+            "javadoc": "职务",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "job",
+            "javadoc": "职位",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deptName",
+            "javadoc": "部门名",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "empNo",
+            "javadoc": "工号",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "seniority",
+            "javadoc": "历史工龄",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "contractor",
+            "javadoc": "合同公司",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthType",
+            "javadoc": "生日类型",
+            "fieldType": "BirthType",
+            "fieldValues": "LUNAR,CALENDAR"
+        },
+        {
+            "fieldName": "birthday",
+            "javadoc": "出生日期",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "workLoc",
+            "javadoc": "工作地点",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contactAddr",
+            "javadoc": "联系地址",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nationality",
+            "javadoc": "国籍",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstName",
+            "javadoc": "名",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "javadoc": "姓",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "others",
+            "javadoc": "添加字段",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isSelfVerify",
+            "javadoc": "员工是否验证",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isHrVerify",
+            "javadoc": "管理（hr）是否验证",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "contract",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "contracts"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "personal",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "personals"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "socialSecurityBenefits",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "socialSecurityBenefits"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "payCard",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "payCards"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dimission",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "dimissions"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "workExperience",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "workExperiences"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "educationExperience",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "educationExperiences"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "directSupervisor",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "directSupervisors"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "additionalPost",
+            "otherEntityRelationshipName": "emp",
+            "relationshipName": "additionalPosts"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "enumEmpStatus",
+            "otherEntityRelationshipName": "employee",
+            "javadoc": "员工状态",
+            "relationshipName": "status",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "enumIdType",
+            "otherEntityRelationshipName": "employee",
+            "javadoc": "证件类型",
+            "relationshipName": "idType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "enumContractType",
+            "otherEntityRelationshipName": "employee",
+            "javadoc": "合同类型",
+            "relationshipName": "contractType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "enumEmpType",
+            "otherEntityRelationshipName": "employee",
+            "javadoc": "员工类型",
+            "relationshipName": "empType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "enumGender",
+            "otherEntityRelationshipName": "employee",
+            "javadoc": "性别",
+            "relationshipName": "gender",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190718052149",
+    "javadoc": "员工",
+    "entityTableName": "employee",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

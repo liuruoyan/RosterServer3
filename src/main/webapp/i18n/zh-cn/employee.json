@@ -1,0 +1,81 @@
+{
+  "rosterServer3App": {
+    "employee": {
+      "home": {
+        "title": "Employees",
+        "createLabel": "创建新 Employee",
+        "createOrEditLabel": "创建或编辑 Employee",
+        "notFound": "No Employee found"
+      },
+      "created": "Employee {{ param }} 创建成功",
+      "updated": "Employee {{ param }} 更新成功",
+      "deleted": "Employee {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Employee {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Employee"
+      },
+      "code": "Code",
+      "name": "Name",
+      "idNumber": "Id Number",
+      "phone": "Phone",
+      "hireDate": "Hire Date",
+      "jobGrade": "Job Grade",
+      "position": "Position",
+      "job": "Job",
+      "deptName": "Dept Name",
+      "empNo": "Emp No",
+      "seniority": "Seniority",
+      "contractor": "Contractor",
+      "birthType": "Birth Type",
+      "birthday": "Birthday",
+      "workLoc": "Work Loc",
+      "contactAddr": "Contact Addr",
+      "nationality": "Nationality",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "others": "Others",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "contracts": "Contracts",
+      "personals": "Personals",
+      "socialSecurityBenefits": "Social Security Benefits",
+      "payCards": "Pay Cards",
+      "dimissions": "Dimissions",
+      "workExperiences": "Work Experiences",
+      "educationExperiences": "Education Experiences",
+      "directSupervisors": "Direct Supervisors",
+      "additionalPosts": "Additional Posts",
+      "status": "Status",
+      "idType": "Id Type",
+      "contractType": "Contract Type",
+      "empType": "Emp Type",
+      "gender": "Gender",
+      "help": {
+        "code": "编码",
+        "name": "员工姓名",
+        "idNumber": "证件号",
+        "phone": "手机号",
+        "hireDate": "入职日期",
+        "jobGrade": "职级",
+        "position": "职务",
+        "job": "职位",
+        "deptName": "部门名",
+        "empNo": "工号",
+        "seniority": "历史工龄",
+        "contractor": "合同公司",
+        "birthType": "生日类型",
+        "birthday": "出生日期",
+        "workLoc": "工作地点",
+        "contactAddr": "联系地址",
+        "nationality": "国籍",
+        "firstName": "名",
+        "lastName": "姓",
+        "others": "添加字段",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

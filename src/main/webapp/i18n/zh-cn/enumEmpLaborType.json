@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumEmpLaborType": {
+      "home": {
+        "title": "Enum Emp Labor Types",
+        "createLabel": "创建新 Enum Emp Labor Type",
+        "createOrEditLabel": "创建或编辑 Enum Emp Labor Type",
+        "notFound": "No Enum Emp Labor Type found"
+      },
+      "created": "Enum Emp Labor Type {{ param }} 创建成功",
+      "updated": "Enum Emp Labor Type {{ param }} 更新成功",
+      "deleted": "Enum Emp Labor Type {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Emp Labor Type {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Emp Labor Type"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

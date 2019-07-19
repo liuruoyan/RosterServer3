@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumPfType": {
+      "home": {
+        "title": "Enum Pf Types",
+        "createLabel": "创建新 Enum Pf Type",
+        "createOrEditLabel": "创建或编辑 Enum Pf Type",
+        "notFound": "No Enum Pf Type found"
+      },
+      "created": "Enum Pf Type {{ param }} 创建成功",
+      "updated": "Enum Pf Type {{ param }} 更新成功",
+      "deleted": "Enum Pf Type {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Pf Type {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Pf Type"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

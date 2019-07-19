@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumSsPayScheme": {
+      "home": {
+        "title": "Enum Ss Pay Schemes",
+        "createLabel": "创建新 Enum Ss Pay Scheme",
+        "createOrEditLabel": "创建或编辑 Enum Ss Pay Scheme",
+        "notFound": "No Enum Ss Pay Scheme found"
+      },
+      "created": "Enum Ss Pay Scheme {{ param }} 创建成功",
+      "updated": "Enum Ss Pay Scheme {{ param }} 更新成功",
+      "deleted": "Enum Ss Pay Scheme {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Ss Pay Scheme {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Ss Pay Scheme"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

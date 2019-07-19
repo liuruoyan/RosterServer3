@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumEducation": {
+      "home": {
+        "title": "Enum Educations",
+        "createLabel": "创建新 Enum Education",
+        "createOrEditLabel": "创建或编辑 Enum Education",
+        "notFound": "No Enum Education found"
+      },
+      "created": "Enum Education {{ param }} 创建成功",
+      "updated": "Enum Education {{ param }} 更新成功",
+      "deleted": "Enum Education {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Education {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Education"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumSsStatus": {
+      "home": {
+        "title": "Enum Ss Statuses",
+        "createLabel": "创建新 Enum Ss Status",
+        "createOrEditLabel": "创建或编辑 Enum Ss Status",
+        "notFound": "No Enum Ss Status found"
+      },
+      "created": "Enum Ss Status {{ param }} 创建成功",
+      "updated": "Enum Ss Status {{ param }} 更新成功",
+      "deleted": "Enum Ss Status {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Ss Status {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Ss Status"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

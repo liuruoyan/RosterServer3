@@ -1,0 +1,37 @@
+{
+  "rosterServer3App": {
+    "payCard": {
+      "home": {
+        "title": "Pay Cards",
+        "createLabel": "创建新 Pay Card",
+        "createOrEditLabel": "创建或编辑 Pay Card",
+        "notFound": "No Pay Card found"
+      },
+      "created": "Pay Card {{ param }} 创建成功",
+      "updated": "Pay Card {{ param }} 更新成功",
+      "deleted": "Pay Card {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Pay Card {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Pay Card"
+      },
+      "code": "Code",
+      "branch": "Branch",
+      "accountName": "Account Name",
+      "bankAccount": "Bank Account",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "depositBank": "Deposit Bank",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "branch": "分支行",
+        "accountName": "开户名",
+        "bankAccount": "银行账号",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

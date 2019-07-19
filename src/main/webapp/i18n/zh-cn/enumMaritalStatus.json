@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumMaritalStatus": {
+      "home": {
+        "title": "Enum Marital Statuses",
+        "createLabel": "创建新 Enum Marital Status",
+        "createOrEditLabel": "创建或编辑 Enum Marital Status",
+        "notFound": "No Enum Marital Status found"
+      },
+      "created": "Enum Marital Status {{ param }} 创建成功",
+      "updated": "Enum Marital Status {{ param }} 更新成功",
+      "deleted": "Enum Marital Status {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Marital Status {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Marital Status"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

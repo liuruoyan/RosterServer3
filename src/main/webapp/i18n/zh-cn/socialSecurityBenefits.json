@@ -1,0 +1,66 @@
+{
+  "rosterServer3App": {
+    "socialSecurityBenefits": {
+      "home": {
+        "title": "Social Security Benefits",
+        "createLabel": "创建新 Social Security Benefits",
+        "createOrEditLabel": "创建或编辑 Social Security Benefits",
+        "notFound": "No Social Security Benefits found"
+      },
+      "created": "Social Security Benefits {{ param }} 创建成功",
+      "updated": "Social Security Benefits {{ param }} 更新成功",
+      "deleted": "Social Security Benefits {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Social Security Benefits {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Social Security Benefits"
+      },
+      "code": "Code",
+      "pfAccount": "Pf Account",
+      "spfAccount": "Spf Account",
+      "pfStartMonth": "Pf Start Month",
+      "pfBase": "Pf Base",
+      "pfStopMonth": "Pf Stop Month",
+      "pfRemark": "Pf Remark",
+      "ssAccount": "Ss Account",
+      "ssCity": "Ss City",
+      "ssStartMonth": "Ss Start Month",
+      "ssBase": "Ss Base",
+      "ssStopMonth": "Ss Stop Month",
+      "ssRemark": "Ss Remark",
+      "allowance": "Allowance",
+      "taxpayer": "Taxpayer",
+      "isSelfVerify": "Is Self Verify",
+      "isHrVerify": "Is Hr Verify",
+      "pfType": "Pf Type",
+      "pfStatus": "Pf Status",
+      "providentPayScheme": "Provident Pay Scheme",
+      "socialSecurityPayScheme": "Social Security Pay Scheme",
+      "ssStatus": "Ss Status",
+      "laborType": "Labor Type",
+      "taxerType": "Taxer Type",
+      "taxArea": "Tax Area",
+      "emp": "Emp",
+      "help": {
+        "code": "编码",
+        "pfAccount": "公积金账号",
+        "spfAccount": "补充公积金账号",
+        "pfStartMonth": "公积金起始月",
+        "pfBase": "公积金基数",
+        "pfStopMonth": "公积金停缴月",
+        "pfRemark": "公积金备注",
+        "ssAccount": "社保账号",
+        "ssCity": "社保城市",
+        "ssStartMonth": "社保起始月",
+        "ssBase": "社保基数",
+        "ssStopMonth": "社保停缴月",
+        "ssRemark": "社保备注",
+        "allowance": "当年已免税额",
+        "taxpayer": "个税缴款义务人",
+        "isSelfVerify": "员工是否验证",
+        "isHrVerify": "管理（hr）是否验证"
+      }
+    }
+  }
+}

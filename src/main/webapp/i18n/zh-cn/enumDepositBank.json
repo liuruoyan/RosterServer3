@@ -1,0 +1,25 @@
+{
+  "rosterServer3App": {
+    "enumDepositBank": {
+      "home": {
+        "title": "Enum Deposit Banks",
+        "createLabel": "创建新 Enum Deposit Bank",
+        "createOrEditLabel": "创建或编辑 Enum Deposit Bank",
+        "notFound": "No Enum Deposit Bank found"
+      },
+      "created": "Enum Deposit Bank {{ param }} 创建成功",
+      "updated": "Enum Deposit Bank {{ param }} 更新成功",
+      "deleted": "Enum Deposit Bank {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Enum Deposit Bank {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Enum Deposit Bank"
+      },
+      "valuez": "Valuez",
+      "orderz": "Orderz",
+      "tenentCode": "Tenent Code",
+      "parent": "Parent"
+    }
+  }
+}

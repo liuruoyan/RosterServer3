@@ -309,27 +309,10 @@ entity PayCard{
     branch String  /** 分支行*/
     accountName String /** 开户名*/
     bankAccount String /** 银行账号*/
-    // depositBank String  /** 开户银行*/
+    depositBank String  /** 开户银行*/
     isSelfVerify Boolean /** 员工是否验证 */
     isHrVerify Boolean  /** 管理（hr）是否验证 */
 }
-
-/** 开户银行*/
-entity EnumDepositBank{
-    valuez String
-    orderz Integer
-    tenentCode String
-}
-
-
-
-relationship ManyToOne{
-    /** 开户银行*/
-    PayCard{depositBank} to EnumDepositBank
-
-    EnumDepositBank{parent} to EnumDepositBank
-}
-
 
 
 /** 离职信息 (多对一 员工)*/

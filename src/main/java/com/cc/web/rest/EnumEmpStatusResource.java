@@ -100,7 +100,7 @@ public class EnumEmpStatusResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of enumEmpStatuses in body.
      */
     @GetMapping("/enum-emp-statuses")
-    public ResponseEntity<List<EnumEmpStatusDTO>> getAllEnumEmpStatuses(EnumEmpStatusCriteria criteria, Pageable pageable, @RequestParam MultiValueMap<String, String> queryParams, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<List<EnumEmpStatusDTO>> getAllEnumEmpStatuses(EnumEmpStatusCriteria criteria, Pageable pageable, @RequestParam(required = false) MultiValueMap<String, String> queryParams, UriComponentsBuilder uriBuilder) {
         log.debug("REST request to get EnumEmpStatuses by criteria: {}", criteria);
         Page<EnumEmpStatusDTO> page = enumEmpStatusQueryService.findByCriteria(criteria, pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(uriBuilder.queryParams(queryParams), page);

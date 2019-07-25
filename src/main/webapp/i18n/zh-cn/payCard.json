@@ -20,15 +20,16 @@
       "branch": "Branch",
       "accountName": "Account Name",
       "bankAccount": "Bank Account",
+      "depositBank": "Deposit Bank",
       "isSelfVerify": "Is Self Verify",
       "isHrVerify": "Is Hr Verify",
-      "depositBank": "Deposit Bank",
       "emp": "Emp",
       "help": {
         "code": "编码",
         "branch": "分支行",
         "accountName": "开户名",
         "bankAccount": "银行账号",
+        "depositBank": "开户银行",
         "isSelfVerify": "员工是否验证",
         "isHrVerify": "管理（hr）是否验证"
       }

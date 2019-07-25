@@ -103,15 +103,14 @@ public class PayCardQueryService extends QueryService<PayCard> {
             if (criteria.getBankAccount() != null) {
                 specification = specification.and(buildStringSpecification(criteria.getBankAccount(), PayCard_.bankAccount));
             }
+            if (criteria.getDepositBank() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getDepositBank(), PayCard_.depositBank));
+            }
             if (criteria.getIsSelfVerify() != null) {
                 specification = specification.and(buildSpecification(criteria.getIsSelfVerify(), PayCard_.isSelfVerify));
             }
             if (criteria.getIsHrVerify() != null) {
                 specification = specification.and(buildSpecification(criteria.getIsHrVerify(), PayCard_.isHrVerify));
-            }
-            if (criteria.getDepositBankId() != null) {
-                specification = specification.and(buildSpecification(criteria.getDepositBankId(),
-                    root -> root.join(PayCard_.depositBank, JoinType.LEFT).get(EnumDepositBank_.id)));
             }
             if (criteria.getEmpId() != null) {
                 specification = specification.and(buildSpecification(criteria.getEmpId(),

@@ -65,6 +65,15 @@ export class PayCardDetail extends React.Component<IPayCardDetailProps> {
             </dt>
             <dd>{payCardEntity.bankAccount}</dd>
             <dt>
+              <span id="depositBank">
+                <Translate contentKey="rosterServer3App.payCard.depositBank">Deposit Bank</Translate>
+              </span>
+              <UncontrolledTooltip target="depositBank">
+                <Translate contentKey="rosterServer3App.payCard.help.depositBank" />
+              </UncontrolledTooltip>
+            </dt>
+            <dd>{payCardEntity.depositBank}</dd>
+            <dt>
               <span id="isSelfVerify">
                 <Translate contentKey="rosterServer3App.payCard.isSelfVerify">Is Self Verify</Translate>
               </span>
@@ -82,10 +91,6 @@ export class PayCardDetail extends React.Component<IPayCardDetailProps> {
               </UncontrolledTooltip>
             </dt>
             <dd>{payCardEntity.isHrVerify ? 'true' : 'false'}</dd>
-            <dt>
-              <Translate contentKey="rosterServer3App.payCard.depositBank">Deposit Bank</Translate>
-            </dt>
-            <dd>{payCardEntity.depositBankId ? payCardEntity.depositBankId : ''}</dd>
             <dt>
               <Translate contentKey="rosterServer3App.payCard.emp">Emp</Translate>
             </dt>

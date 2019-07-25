@@ -4,9 +4,9 @@ export interface IPayCard {
   branch?: string;
   accountName?: string;
   bankAccount?: string;
+  depositBank?: string;
   isSelfVerify?: boolean;
   isHrVerify?: boolean;
-  depositBankId?: number;
   empId?: number;
 }
 

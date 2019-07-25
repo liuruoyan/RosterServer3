@@ -80,14 +80,14 @@ export class PayCard extends React.Component<IPayCardProps, IPayCardState> {
                   <th className="hand" onClick={this.sort('bankAccount')}>
                     <Translate contentKey="rosterServer3App.payCard.bankAccount">Bank Account</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
+                  <th className="hand" onClick={this.sort('depositBank')}>
+                    <Translate contentKey="rosterServer3App.payCard.depositBank">Deposit Bank</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
                   <th className="hand" onClick={this.sort('isSelfVerify')}>
                     <Translate contentKey="rosterServer3App.payCard.isSelfVerify">Is Self Verify</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={this.sort('isHrVerify')}>
                     <Translate contentKey="rosterServer3App.payCard.isHrVerify">Is Hr Verify</Translate> <FontAwesomeIcon icon="sort" />
-                  </th>
-                  <th>
-                    <Translate contentKey="rosterServer3App.payCard.depositBank">Deposit Bank</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th>
                     <Translate contentKey="rosterServer3App.payCard.emp">Emp</Translate> <FontAwesomeIcon icon="sort" />
@@ -107,11 +107,9 @@ export class PayCard extends React.Component<IPayCardProps, IPayCardState> {
                     <td>{payCard.branch}</td>
                     <td>{payCard.accountName}</td>
                     <td>{payCard.bankAccount}</td>
+                    <td>{payCard.depositBank}</td>
                     <td>{payCard.isSelfVerify ? 'true' : 'false'}</td>
                     <td>{payCard.isHrVerify ? 'true' : 'false'}</td>
-                    <td>
-                      {payCard.depositBankId ? <Link to={`enum-deposit-bank/${payCard.depositBankId}`}>{payCard.depositBankId}</Link> : ''}
-                    </td>
                     <td>{payCard.empId ? <Link to={`employee/${payCard.empId}`}>{payCard.empId}</Link> : ''}</td>
                     <td className="text-right">
                       <div className="btn-group flex-btn-group-container">

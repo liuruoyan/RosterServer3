@@ -2,7 +2,6 @@ package com.cc.web.rest;
 
 import com.cc.RosterServer3App;
 import com.cc.domain.PayCard;
-import com.cc.domain.EnumDepositBank;
 import com.cc.domain.Employee;
 import com.cc.repository.PayCardRepository;
 import com.cc.service.PayCardService;
@@ -51,6 +50,9 @@ public class PayCardResourceIT {
 
     private static final String DEFAULT_BANK_ACCOUNT = "AAAAAAAAAA";
     private static final String UPDATED_BANK_ACCOUNT = "BBBBBBBBBB";
+
+    private static final String DEFAULT_DEPOSIT_BANK = "AAAAAAAAAA";
+    private static final String UPDATED_DEPOSIT_BANK = "BBBBBBBBBB";
 
     private static final Boolean DEFAULT_IS_SELF_VERIFY = false;
     private static final Boolean UPDATED_IS_SELF_VERIFY = true;
@@ -113,6 +115,7 @@ public class PayCardResourceIT {
             .branch(DEFAULT_BRANCH)
             .accountName(DEFAULT_ACCOUNT_NAME)
             .bankAccount(DEFAULT_BANK_ACCOUNT)
+            .depositBank(DEFAULT_DEPOSIT_BANK)
             .isSelfVerify(DEFAULT_IS_SELF_VERIFY)
             .isHrVerify(DEFAULT_IS_HR_VERIFY);
         return payCard;
@@ -129,6 +132,7 @@ public class PayCardResourceIT {
             .branch(UPDATED_BRANCH)
             .accountName(UPDATED_ACCOUNT_NAME)
             .bankAccount(UPDATED_BANK_ACCOUNT)
+            .depositBank(UPDATED_DEPOSIT_BANK)
             .isSelfVerify(UPDATED_IS_SELF_VERIFY)
             .isHrVerify(UPDATED_IS_HR_VERIFY);
         return payCard;
@@ -159,6 +163,7 @@ public class PayCardResourceIT {
         assertThat(testPayCard.getBranch()).isEqualTo(DEFAULT_BRANCH);
         assertThat(testPayCard.getAccountName()).isEqualTo(DEFAULT_ACCOUNT_NAME);
         assertThat(testPayCard.getBankAccount()).isEqualTo(DEFAULT_BANK_ACCOUNT);
+        assertThat(testPayCard.getDepositBank()).isEqualTo(DEFAULT_DEPOSIT_BANK);
         assertThat(testPayCard.isIsSelfVerify()).isEqualTo(DEFAULT_IS_SELF_VERIFY);
         assertThat(testPayCard.isIsHrVerify()).isEqualTo(DEFAULT_IS_HR_VERIFY);
     }
@@ -199,6 +204,7 @@ public class PayCardResourceIT {
             .andExpect(jsonPath("$.[*].branch").value(hasItem(DEFAULT_BRANCH.toString())))
             .andExpect(jsonPath("$.[*].accountName").value(hasItem(DEFAULT_ACCOUNT_NAME.toString())))
             .andExpect(jsonPath("$.[*].bankAccount").value(hasItem(DEFAULT_BANK_ACCOUNT.toString())))
+            .andExpect(jsonPath("$.[*].depositBank").value(hasItem(DEFAULT_DEPOSIT_BANK.toString())))
             .andExpect(jsonPath("$.[*].isSelfVerify").value(hasItem(DEFAULT_IS_SELF_VERIFY.booleanValue())))
             .andExpect(jsonPath("$.[*].isHrVerify").value(hasItem(DEFAULT_IS_HR_VERIFY.booleanValue())));
     }
@@ -218,6 +224,7 @@ public class PayCardResourceIT {
             .andExpect(jsonPath("$.branch").value(DEFAULT_BRANCH.toString()))
             .andExpect(jsonPath("$.accountName").value(DEFAULT_ACCOUNT_NAME.toString()))
             .andExpect(jsonPath("$.bankAccount").value(DEFAULT_BANK_ACCOUNT.toString()))
+            .andExpect(jsonPath("$.depositBank").value(DEFAULT_DEPOSIT_BANK.toString()))
             .andExpect(jsonPath("$.isSelfVerify").value(DEFAULT_IS_SELF_VERIFY.booleanValue()))
             .andExpect(jsonPath("$.isHrVerify").value(DEFAULT_IS_HR_VERIFY.booleanValue()));
     }
@@ -380,6 +387,45 @@ public class PayCardResourceIT {
 
     @Test
     @Transactional
+    public void getAllPayCardsByDepositBankIsEqualToSomething() throws Exception {
+        // Initialize the database
+        payCardRepository.saveAndFlush(payCard);
+
+        // Get all the payCardList where depositBank equals to DEFAULT_DEPOSIT_BANK
+        defaultPayCardShouldBeFound("depositBank.equals=" + DEFAULT_DEPOSIT_BANK);
+
+        // Get all the payCardList where depositBank equals to UPDATED_DEPOSIT_BANK
+        defaultPayCardShouldNotBeFound("depositBank.equals=" + UPDATED_DEPOSIT_BANK);
+    }
+
+    @Test
+    @Transactional
+    public void getAllPayCardsByDepositBankIsInShouldWork() throws Exception {
+        // Initialize the database
+        payCardRepository.saveAndFlush(payCard);
+
+        // Get all the payCardList where depositBank in DEFAULT_DEPOSIT_BANK or UPDATED_DEPOSIT_BANK
+        defaultPayCardShouldBeFound("depositBank.in=" + DEFAULT_DEPOSIT_BANK + "," + UPDATED_DEPOSIT_BANK);
+
+        // Get all the payCardList where depositBank equals to UPDATED_DEPOSIT_BANK
+        defaultPayCardShouldNotBeFound("depositBank.in=" + UPDATED_DEPOSIT_BANK);
+    }
+
+    @Test
+    @Transactional
+    public void getAllPayCardsByDepositBankIsNullOrNotNull() throws Exception {
+        // Initialize the database
+        payCardRepository.saveAndFlush(payCard);
+
+        // Get all the payCardList where depositBank is not null
+        defaultPayCardShouldBeFound("depositBank.specified=true");
+
+        // Get all the payCardList where depositBank is null
+        defaultPayCardShouldNotBeFound("depositBank.specified=false");
+    }
+
+    @Test
+    @Transactional
     public void getAllPayCardsByIsSelfVerifyIsEqualToSomething() throws Exception {
         // Initialize the database
         payCardRepository.saveAndFlush(payCard);
@@ -458,25 +504,6 @@ public class PayCardResourceIT {
 
     @Test
     @Transactional
-    public void getAllPayCardsByDepositBankIsEqualToSomething() throws Exception {
-        // Initialize the database
-        EnumDepositBank depositBank = EnumDepositBankResourceIT.createEntity(em);
-        em.persist(depositBank);
-        em.flush();
-        payCard.setDepositBank(depositBank);
-        payCardRepository.saveAndFlush(payCard);
-        Long depositBankId = depositBank.getId();
-
-        // Get all the payCardList where depositBank equals to depositBankId
-        defaultPayCardShouldBeFound("depositBankId.equals=" + depositBankId);
-
-        // Get all the payCardList where depositBank equals to depositBankId + 1
-        defaultPayCardShouldNotBeFound("depositBankId.equals=" + (depositBankId + 1));
-    }
-
-
-    @Test
-    @Transactional
     public void getAllPayCardsByEmpIsEqualToSomething() throws Exception {
         // Initialize the database
         Employee emp = EmployeeResourceIT.createEntity(em);
@@ -505,6 +532,7 @@ public class PayCardResourceIT {
             .andExpect(jsonPath("$.[*].branch").value(hasItem(DEFAULT_BRANCH)))
             .andExpect(jsonPath("$.[*].accountName").value(hasItem(DEFAULT_ACCOUNT_NAME)))
             .andExpect(jsonPath("$.[*].bankAccount").value(hasItem(DEFAULT_BANK_ACCOUNT)))
+            .andExpect(jsonPath("$.[*].depositBank").value(hasItem(DEFAULT_DEPOSIT_BANK)))
             .andExpect(jsonPath("$.[*].isSelfVerify").value(hasItem(DEFAULT_IS_SELF_VERIFY.booleanValue())))
             .andExpect(jsonPath("$.[*].isHrVerify").value(hasItem(DEFAULT_IS_HR_VERIFY.booleanValue())));
 
@@ -558,6 +586,7 @@ public class PayCardResourceIT {
             .branch(UPDATED_BRANCH)
             .accountName(UPDATED_ACCOUNT_NAME)
             .bankAccount(UPDATED_BANK_ACCOUNT)
+            .depositBank(UPDATED_DEPOSIT_BANK)
             .isSelfVerify(UPDATED_IS_SELF_VERIFY)
             .isHrVerify(UPDATED_IS_HR_VERIFY);
         PayCardDTO payCardDTO = payCardMapper.toDto(updatedPayCard);
@@ -575,6 +604,7 @@ public class PayCardResourceIT {
         assertThat(testPayCard.getBranch()).isEqualTo(UPDATED_BRANCH);
         assertThat(testPayCard.getAccountName()).isEqualTo(UPDATED_ACCOUNT_NAME);
         assertThat(testPayCard.getBankAccount()).isEqualTo(UPDATED_BANK_ACCOUNT);
+        assertThat(testPayCard.getDepositBank()).isEqualTo(UPDATED_DEPOSIT_BANK);
         assertThat(testPayCard.isIsSelfVerify()).isEqualTo(UPDATED_IS_SELF_VERIFY);
         assertThat(testPayCard.isIsHrVerify()).isEqualTo(UPDATED_IS_HR_VERIFY);
     }

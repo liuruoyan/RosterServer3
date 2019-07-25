@@ -8,8 +8,6 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { IEnumDepositBank } from 'app/shared/model/enum-deposit-bank.model';
-import { getEntities as getEnumDepositBanks } from 'app/entities/enum-deposit-bank/enum-deposit-bank.reducer';
 import { IEmployee } from 'app/shared/model/employee.model';
 import { getEntities as getEmployees } from 'app/entities/employee/employee.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './pay-card.reducer';
@@ -22,7 +20,6 @@ export interface IPayCardUpdateProps extends StateProps, DispatchProps, RouteCom
 
 export interface IPayCardUpdateState {
   isNew: boolean;
-  depositBankId: string;
   empId: string;
 }
 
@@ -30,7 +27,6 @@ export class PayCardUpdate extends React.Component<IPayCardUpdateProps, IPayCard
   constructor(props) {
     super(props);
     this.state = {
-      depositBankId: '0',
       empId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
@@ -49,7 +45,6 @@ export class PayCardUpdate extends React.Component<IPayCardUpdateProps, IPayCard
       this.props.getEntity(this.props.match.params.id);
     }
 
-    this.props.getEnumDepositBanks();
     this.props.getEmployees();
   }
 
@@ -74,7 +69,7 @@ export class PayCardUpdate extends React.Component<IPayCardUpdateProps, IPayCard
   };
 
   render() {
-    const { payCardEntity, enumDepositBanks, employees, loading, updating } = this.props;
+    const { payCardEntity, employees, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -137,6 +132,15 @@ export class PayCardUpdate extends React.Component<IPayCardUpdateProps, IPayCard
                   </UncontrolledTooltip>
                 </AvGroup>
                 <AvGroup>
+                  <Label id="depositBankLabel" for="pay-card-depositBank">
+                    <Translate contentKey="rosterServer3App.payCard.depositBank">Deposit Bank</Translate>
+                  </Label>
+                  <AvField id="pay-card-depositBank" type="text" name="depositBank" />
+                  <UncontrolledTooltip target="depositBankLabel">
+                    <Translate contentKey="rosterServer3App.payCard.help.depositBank" />
+                  </UncontrolledTooltip>
+                </AvGroup>
+                <AvGroup>
                   <Label id="isSelfVerifyLabel" check>
                     <AvInput id="pay-card-isSelfVerify" type="checkbox" className="form-control" name="isSelfVerify" />
                     <Translate contentKey="rosterServer3App.payCard.isSelfVerify">Is Self Verify</Translate>
@@ -153,21 +157,6 @@ export class PayCardUpdate extends React.Component<IPayCardUpdateProps, IPayCard
                   <UncontrolledTooltip target="isHrVerifyLabel">
                     <Translate contentKey="rosterServer3App.payCard.help.isHrVerify" />
                   </UncontrolledTooltip>
-                </AvGroup>
-                <AvGroup>
-                  <Label for="pay-card-depositBank">
-                    <Translate contentKey="rosterServer3App.payCard.depositBank">Deposit Bank</Translate>
-                  </Label>
-                  <AvInput id="pay-card-depositBank" type="select" className="form-control" name="depositBankId">
-                    <option value="" key="0" />
-                    {enumDepositBanks
-                      ? enumDepositBanks.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
                 </AvGroup>
                 <AvGroup>
                   <Label for="pay-card-emp">
@@ -207,7 +196,6 @@ export class PayCardUpdate extends React.Component<IPayCardUpdateProps, IPayCard
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  enumDepositBanks: storeState.enumDepositBank.entities,
   employees: storeState.employee.entities,
   payCardEntity: storeState.payCard.entity,
   loading: storeState.payCard.loading,
@@ -216,7 +204,6 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  getEnumDepositBanks,
   getEmployees,
   getEntity,
   updateEntity,

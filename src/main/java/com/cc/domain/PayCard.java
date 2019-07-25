@@ -43,6 +43,12 @@ public class PayCard implements Serializable {
     private String bankAccount;
 
     /**
+     * 开户银行
+     */
+    @Column(name = "deposit_bank")
+    private String depositBank;
+
+    /**
      * 员工是否验证
      */
     @Column(name = "is_self_verify")
@@ -53,13 +59,6 @@ public class PayCard implements Serializable {
      */
     @Column(name = "is_hr_verify")
     private Boolean isHrVerify;
-
-    /**
-     * 开户银行
-     */
-    @ManyToOne
-    @JsonIgnoreProperties("payCards")
-    private EnumDepositBank depositBank;
 
     @ManyToOne
     @JsonIgnoreProperties("payCards")
@@ -126,6 +125,19 @@ public class PayCard implements Serializable {
         this.bankAccount = bankAccount;
     }
 
+    public String getDepositBank() {
+        return depositBank;
+    }
+
+    public PayCard depositBank(String depositBank) {
+        this.depositBank = depositBank;
+        return this;
+    }
+
+    public void setDepositBank(String depositBank) {
+        this.depositBank = depositBank;
+    }
+
     public Boolean isIsSelfVerify() {
         return isSelfVerify;
     }
@@ -150,19 +162,6 @@ public class PayCard implements Serializable {
 
     public void setIsHrVerify(Boolean isHrVerify) {
         this.isHrVerify = isHrVerify;
-    }
-
-    public EnumDepositBank getDepositBank() {
-        return depositBank;
-    }
-
-    public PayCard depositBank(EnumDepositBank enumDepositBank) {
-        this.depositBank = enumDepositBank;
-        return this;
-    }
-
-    public void setDepositBank(EnumDepositBank enumDepositBank) {
-        this.depositBank = enumDepositBank;
     }
 
     public Employee getEmp() {
@@ -203,6 +202,7 @@ public class PayCard implements Serializable {
             ", branch='" + getBranch() + "'" +
             ", accountName='" + getAccountName() + "'" +
             ", bankAccount='" + getBankAccount() + "'" +
+            ", depositBank='" + getDepositBank() + "'" +
             ", isSelfVerify='" + isIsSelfVerify() + "'" +
             ", isHrVerify='" + isIsHrVerify() + "'" +
             "}";

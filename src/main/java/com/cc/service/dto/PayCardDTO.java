@@ -37,6 +37,12 @@ public class PayCardDTO implements Serializable {
     private String bankAccount;
 
     /**
+     * 开户银行
+     */
+    @ApiModelProperty(value = "开户银行")
+    private String depositBank;
+
+    /**
      * 员工是否验证
      */
     @ApiModelProperty(value = "员工是否验证")
@@ -48,12 +54,6 @@ public class PayCardDTO implements Serializable {
     @ApiModelProperty(value = "管理（hr）是否验证")
     private Boolean isHrVerify;
 
-    /**
-     * 开户银行
-     */
-    @ApiModelProperty(value = "开户银行")
-
-    private Long depositBankId;
 
     private Long empId;
 
@@ -97,6 +97,14 @@ public class PayCardDTO implements Serializable {
         this.bankAccount = bankAccount;
     }
 
+    public String getDepositBank() {
+        return depositBank;
+    }
+
+    public void setDepositBank(String depositBank) {
+        this.depositBank = depositBank;
+    }
+
     public Boolean isIsSelfVerify() {
         return isSelfVerify;
     }
@@ -111,14 +119,6 @@ public class PayCardDTO implements Serializable {
 
     public void setIsHrVerify(Boolean isHrVerify) {
         this.isHrVerify = isHrVerify;
-    }
-
-    public Long getDepositBankId() {
-        return depositBankId;
-    }
-
-    public void setDepositBankId(Long enumDepositBankId) {
-        this.depositBankId = enumDepositBankId;
     }
 
     public Long getEmpId() {
@@ -158,9 +158,9 @@ public class PayCardDTO implements Serializable {
             ", branch='" + getBranch() + "'" +
             ", accountName='" + getAccountName() + "'" +
             ", bankAccount='" + getBankAccount() + "'" +
+            ", depositBank='" + getDepositBank() + "'" +
             ", isSelfVerify='" + isIsSelfVerify() + "'" +
             ", isHrVerify='" + isIsHrVerify() + "'" +
-            ", depositBank=" + getDepositBankId() +
             ", emp=" + getEmpId() +
             "}";
     }

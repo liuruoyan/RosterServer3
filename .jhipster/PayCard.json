@@ -22,6 +22,11 @@
             "fieldType": "String"
         },
         {
+            "fieldName": "depositBank",
+            "javadoc": "开户银行",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "isSelfVerify",
             "javadoc": "员工是否验证",
             "fieldType": "Boolean"
@@ -35,21 +40,13 @@
     "relationships": [
         {
             "relationshipType": "many-to-one",
-            "otherEntityName": "enumDepositBank",
-            "otherEntityRelationshipName": "payCard",
-            "javadoc": "开户银行",
-            "relationshipName": "depositBank",
-            "otherEntityField": "id"
-        },
-        {
-            "relationshipType": "many-to-one",
             "otherEntityName": "employee",
             "otherEntityRelationshipName": "payCards",
             "relationshipName": "emp",
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190718052210",
+    "changelogDate": "20190723012513",
     "javadoc": "工资卡 (多对一 员工)",
     "entityTableName": "pay_card",
     "dto": "mapstruct",

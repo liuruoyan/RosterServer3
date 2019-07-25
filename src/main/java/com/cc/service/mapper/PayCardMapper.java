@@ -8,14 +8,12 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity {@link PayCard} and its DTO {@link PayCardDTO}.
  */
-@Mapper(componentModel = "spring", uses = {EnumDepositBankMapper.class, EmployeeMapper.class})
+@Mapper(componentModel = "spring", uses = {EmployeeMapper.class})
 public interface PayCardMapper extends EntityMapper<PayCardDTO, PayCard> {
 
-    @Mapping(source = "depositBank.id", target = "depositBankId")
     @Mapping(source = "emp.id", target = "empId")
     PayCardDTO toDto(PayCard payCard);
 
-    @Mapping(source = "depositBankId", target = "depositBank")
     @Mapping(source = "empId", target = "emp")
     PayCard toEntity(PayCardDTO payCardDTO);
 

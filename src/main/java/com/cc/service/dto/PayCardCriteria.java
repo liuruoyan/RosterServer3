@@ -34,11 +34,11 @@ public class PayCardCriteria implements Serializable, Criteria {
 
     private StringFilter bankAccount;
 
+    private StringFilter depositBank;
+
     private BooleanFilter isSelfVerify;
 
     private BooleanFilter isHrVerify;
-
-    private LongFilter depositBankId;
 
     private LongFilter empId;
 
@@ -51,9 +51,9 @@ public class PayCardCriteria implements Serializable, Criteria {
         this.branch = other.branch == null ? null : other.branch.copy();
         this.accountName = other.accountName == null ? null : other.accountName.copy();
         this.bankAccount = other.bankAccount == null ? null : other.bankAccount.copy();
+        this.depositBank = other.depositBank == null ? null : other.depositBank.copy();
         this.isSelfVerify = other.isSelfVerify == null ? null : other.isSelfVerify.copy();
         this.isHrVerify = other.isHrVerify == null ? null : other.isHrVerify.copy();
-        this.depositBankId = other.depositBankId == null ? null : other.depositBankId.copy();
         this.empId = other.empId == null ? null : other.empId.copy();
     }
 
@@ -102,6 +102,14 @@ public class PayCardCriteria implements Serializable, Criteria {
         this.bankAccount = bankAccount;
     }
 
+    public StringFilter getDepositBank() {
+        return depositBank;
+    }
+
+    public void setDepositBank(StringFilter depositBank) {
+        this.depositBank = depositBank;
+    }
+
     public BooleanFilter getIsSelfVerify() {
         return isSelfVerify;
     }
@@ -116,14 +124,6 @@ public class PayCardCriteria implements Serializable, Criteria {
 
     public void setIsHrVerify(BooleanFilter isHrVerify) {
         this.isHrVerify = isHrVerify;
-    }
-
-    public LongFilter getDepositBankId() {
-        return depositBankId;
-    }
-
-    public void setDepositBankId(LongFilter depositBankId) {
-        this.depositBankId = depositBankId;
     }
 
     public LongFilter getEmpId() {
@@ -150,9 +150,9 @@ public class PayCardCriteria implements Serializable, Criteria {
             Objects.equals(branch, that.branch) &&
             Objects.equals(accountName, that.accountName) &&
             Objects.equals(bankAccount, that.bankAccount) &&
+            Objects.equals(depositBank, that.depositBank) &&
             Objects.equals(isSelfVerify, that.isSelfVerify) &&
             Objects.equals(isHrVerify, that.isHrVerify) &&
-            Objects.equals(depositBankId, that.depositBankId) &&
             Objects.equals(empId, that.empId);
     }
 
@@ -164,9 +164,9 @@ public class PayCardCriteria implements Serializable, Criteria {
         branch,
         accountName,
         bankAccount,
+        depositBank,
         isSelfVerify,
         isHrVerify,
-        depositBankId,
         empId
         );
     }
@@ -179,9 +179,9 @@ public class PayCardCriteria implements Serializable, Criteria {
                 (branch != null ? "branch=" + branch + ", " : "") +
                 (accountName != null ? "accountName=" + accountName + ", " : "") +
                 (bankAccount != null ? "bankAccount=" + bankAccount + ", " : "") +
+                (depositBank != null ? "depositBank=" + depositBank + ", " : "") +
                 (isSelfVerify != null ? "isSelfVerify=" + isSelfVerify + ", " : "") +
                 (isHrVerify != null ? "isHrVerify=" + isHrVerify + ", " : "") +
-                (depositBankId != null ? "depositBankId=" + depositBankId + ", " : "") +
                 (empId != null ? "empId=" + empId + ", " : "") +
             "}";
     }
